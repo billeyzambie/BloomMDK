@@ -2,18 +2,19 @@
 #define __COLOR_H__
 
 #include "Common.h"
+#include "../Bloom/Bloom.h"
 
 namespace Sexy
 {
 
 #pragma pack(push, 1)
-struct SexyRGBA
+struct BLOOM_API SexyRGBA
 {
 	unsigned char b, g, r, a;
 };
 #pragma pack(pop)
 
-class Color
+class BLOOM_API Color
 {
   public:
 	int mRed;

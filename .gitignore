@@ -1,6 +1,8 @@
 # .gitignore
 build/
 out/
+thirdparty/
+bloomapi/
 *.exe
 *.pdb
 .vscode/

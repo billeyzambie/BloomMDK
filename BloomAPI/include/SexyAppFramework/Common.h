@@ -6,6 +6,9 @@
 
 //Libray Headers Start
 
+#include <SDL3/SDL_timer.h>
+#include <utf8.h>
+
 //Libray Headers End
 
 // Platform Headers Start
