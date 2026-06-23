@@ -14,7 +14,7 @@ set(BLOOM_LIB "${BLOOM_API_DIR}/bin/${CMAKE_BUILD_TYPE}${ARCHITECTURE}/LawnProje
 
 set(BLOOM_INCLUDE "${BLOOM_API_DIR}/include/")
 
-include_directories("${BLOOM_INCLUDE}/Bloom/")
+include_directories("${BLOOM_INCLUDE}/BloomLib/")
 include_directories("${BLOOM_INCLUDE}/Lawn/")
 include_directories("${BLOOM_INCLUDE}/SexyAppFramework/")
 
@@ -28,9 +28,7 @@ find_package(Ogg CONFIG REQUIRED)
 find_package(Vorbis CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 find_package(Freetype REQUIRED)
-if (SEXY_CRASH_HANDLER)
 find_package(cpptrace CONFIG REQUIRED)
-endif()
 find_package(CURL CONFIG REQUIRED)
 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
@@ -54,7 +52,7 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
     Freetype::Freetype
     Vorbis::vorbisfile
     Vorbis::vorbis
-    $<$<BOOL:${SEXY_CRASH_HANDLER}>:cpptrace::cpptrace>
+    cpptrace::cpptrace
     CURL::libcurl
     #ImageLib
     #PakLib
