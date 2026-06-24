@@ -124,17 +124,9 @@ target_compile_definitions(${PROJECT_NAME} PUBLIC
     SEXY_USE_SDL3_RENDERER
 )
 
-if(SEXY_USE_CONTROLLER)
-    target_compile_definitions(${PROJECT_NAME} PUBLIC SEXY_USE_CONTROLLER)
-endif()
-
-if(SEXY_USE_IMGUI)
-    target_compile_definitions(${PROJECT_NAME} PUBLIC SEXY_USE_IMGUI)
-endif()
-
-if(SEXY_CRASH_HANDLER AND SEXY_USE_IMGUI)
-    target_compile_definitions(${PROJECT_NAME} PUBLIC SEXY_CRASH_HANDLER)
-endif()
+target_compile_definitions(${PROJECT_NAME} PUBLIC SEXY_USE_CONTROLLER)
+target_compile_definitions(${PROJECT_NAME} PUBLIC SEXY_USE_IMGUI)
+target_compile_definitions(${PROJECT_NAME} PUBLIC SEXY_CRASH_HANDLER)
 
 
 if (CMAKE_SIZEOF_VOID_P EQUAL 8)
