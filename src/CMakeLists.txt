@@ -14,9 +14,11 @@ set(BLOOM_LIB "${BLOOM_API_DIR}/bin/${CMAKE_BUILD_TYPE}${ARCHITECTURE}/LawnProje
 
 set(BLOOM_INCLUDE "${BLOOM_API_DIR}/include/")
 
+include_directories("${BLOOM_INCLUDE}/")
 include_directories("${BLOOM_INCLUDE}/BloomLib/")
 include_directories("${BLOOM_INCLUDE}/Lawn/")
 include_directories("${BLOOM_INCLUDE}/SexyAppFramework/")
+include_directories("${BLOOM_INCLUDE}/Sexy.TodLib/")
 
 set(SEXY_USE_IMGUI ON)
 set(SEXY_USE_CONTROLLER ON)
