@@ -16,7 +16,7 @@ add_compile_options($<$<CONFIG:Debug>:/MDd>)
 add_compile_options($<$<CONFIG:Release>:/MD>)
 
 set(CMAKE_C_STANDARD 17)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 
