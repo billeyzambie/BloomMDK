@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 
 #include <StoreItem/StoreItemTypes.h>
+#include <StoreItem/StoreItemGroups.h>
 #include <Registries.h>
 
 #include <TodFoley.h>
@@ -18,6 +19,9 @@ const RegistryTypeHolder<StoreItemType>& BRAIN = Registries::STORE_ITEMS.Registe
 	anAttributes.mBuyCount = 2;
 	anAttributes.mMaxBuyCount = 10;
 	StoreItemType* aStoreItemType = new StoreItemType("examplemod", "brain", anAttributes);
+
+	aStoreItemType->mGroup = StoreItemGroups::UPGRADES;
+
 	return aStoreItemType;
 });
 
